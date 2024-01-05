@@ -1,0 +1,29 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WhatsAppClone"
+             xmlns:u="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+             xmlns:m="clr-namespace:UraniumUI.Material.Resources;assembly=UraniumUI.Material"
+             xmlns:icon="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+             x:Class="WhatsAppClone.App"
+             Shell.BackgroundColor="{x:StaticResource Primary}">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="appColors" Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary x:Name="appStyles" Source="Resources/Styles/Styles.xaml" />
+
+                <m:StyleResource 
+                    ColorsOverride="{x:Reference appColors}"
+                    BasedOn="{x:Reference appStyles}"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <FontImageSource 
+                x:Key="Teste"
+                FontFamily="MaterialRegular" 
+                Size="18"
+                Glyph="{x:Static icon:MaterialRegular.Group}" 
+                Color="White" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

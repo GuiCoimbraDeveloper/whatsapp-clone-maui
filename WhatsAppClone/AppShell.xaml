@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="WhatsAppClone.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WhatsAppClone.Pages"
+    xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+    Title="WhatsAppClone">
+
+    <Shell.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <FontImageSource 
+                FontFamily="MaterialRegular" 
+                Glyph="{x:Static m:MaterialRegular.Camera_alt}" 
+                Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <FontImageSource 
+                FontFamily="MaterialRegular" 
+                Glyph="{x:Static m:MaterialRegular.Search}" 
+                Color="White" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        
+        <ToolbarItem Text="New group" Order="Secondary"/>
+        <ToolbarItem Text="New broadcast" Order="Secondary"/>
+        <ToolbarItem Text="Linked Devices" Order="Secondary"/>
+        <ToolbarItem Text="Starred Messages" Order="Secondary"/>
+        <ToolbarItem Text="Payments" Order="Secondary"/>
+        <ToolbarItem Text="Settings" Order="Secondary"/>
+
+    </Shell.ToolbarItems>
+
+    <TabBar x:Name="TabsPaginas">
+        <Tab>
+            <ShellContent Title="Chats" ContentTemplate="{DataTemplate local:ChatsPage}"/>
+            <ShellContent Title="Conversas" ContentTemplate="{DataTemplate local:StatusPage}"/>
+            <ShellContent Title="Atualizações" ContentTemplate="{DataTemplate local:CallsPage}"/>
+            <ShellContent Title="Chamadas" ContentTemplate="{DataTemplate local:ChatsPage}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>
